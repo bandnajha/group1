@@ -1,7 +1,6 @@
 FROM maven:3.6.0-jdk-11-slim AS build
 WORKDIR /home/app
 COPY pom.xml .
-COPY src src
 ENV MAVEN_CONFIG=''
 RUN mvn package
 
